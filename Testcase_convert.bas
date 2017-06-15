@@ -29,7 +29,7 @@ Sub db()
 
     cn.Provider = "Microsoft.ACE.OLEDB.12.0"        'access 2007/2010/2013 64bit version use this ace engine
                                                     ' maybe 32bit version sw can use "Microsoft.Jet.Oledb.4.0"
-    cn.Open (ThisWorkbook.path & "\Êı¾İ¿â\class.accdb")
+    cn.Open (ThisWorkbook.path & "\æ•°æ®åº“\class.accdb")
     
     rs.ActiveConnection = cn
     'rs.CursorType = adOpenDynamic       'if adOpenStatic , recordcount can be used
@@ -73,7 +73,7 @@ Sub db()
     
     
 '    If Not rs.EOF Then
-'        MsgBox ("³É¼¨ÒÑ¾­´æÔÚÓÚÊı¾İ¿âÖĞ")
+'        MsgBox ("æˆç»©å·²ç»å­˜åœ¨äºæ•°æ®åº“ä¸­")
 '    Else
 '        For i = 3 To 18
 '            rs.addnew
@@ -90,13 +90,13 @@ Sub db()
 '                rs!chinese = Sheet1.Cells(18, 2)
 '                rs!english = Sheet1.Cells(18, 4)
 '                rs!Math = Sheet1.Cells(18, 3)
-'                rs!Æ½¾ù·Ö = CInt((rs!chinese + rs!english + rs!Math) / 3)
-'                rs!×Ü·Ö = rs!chinese + rs!english + rs!Math
-'                Sheet1.Cells(18, 5) = rs!Æ½¾ù·Ö
+'                rs!å¹³å‡åˆ† = CInt((rs!chinese + rs!english + rs!Math) / 3)
+'                rs!æ€»åˆ† = rs!chinese + rs!english + rs!Math
+'                Sheet1.Cells(18, 5) = rs!å¹³å‡åˆ†
 '            Else
-'                rs!×Ü·Ö = CInt(Sheet1.Cells(i, 2)) + CInt(Sheet1.Cells(i, 3)) + CInt(Sheet1.Cells(i, 4))
-'                rs!Æ½¾ù·Ö = CInt(rs!×Ü·Ö / 3)
-'                Sheet1.Cells(i, 5) = rs!Æ½¾ù·Ö
+'                rs!æ€»åˆ† = CInt(Sheet1.Cells(i, 2)) + CInt(Sheet1.Cells(i, 3)) + CInt(Sheet1.Cells(i, 4))
+'                rs!å¹³å‡åˆ† = CInt(rs!æ€»åˆ† / 3)
+'                Sheet1.Cells(i, 5) = rs!å¹³å‡åˆ†
 '            End If
 '
 '            rs.addnew
@@ -113,13 +113,13 @@ Sub db()
 '                rs!chinese = allchineseB
 '                rs!english = allenglishB
 '                rs!Math = allmathB
-'                rs!Æ½¾ù·Ö = CInt((rs!chinese + rs!english + rs!Math) / 3)
-'                Sheet1.Cells(18, 11) = rs!Æ½¾ù·Ö
-'                rs!×Ü·Ö = rs!chinese + rs!english + rs!Math
+'                rs!å¹³å‡åˆ† = CInt((rs!chinese + rs!english + rs!Math) / 3)
+'                Sheet1.Cells(18, 11) = rs!å¹³å‡åˆ†
+'                rs!æ€»åˆ† = rs!chinese + rs!english + rs!Math
 '            Else
-'                rs!×Ü·Ö = CInt(Sheet1.Cells(i, 8)) + CInt(Sheet1.Cells(i, 9)) + CInt(Sheet1.Cells(i, 10))
-'                rs!Æ½¾ù·Ö = CInt(rs!×Ü·Ö / 3)
-'                Sheet1.Cells(i, 11) = rs!Æ½¾ù·Ö
+'                rs!æ€»åˆ† = CInt(Sheet1.Cells(i, 8)) + CInt(Sheet1.Cells(i, 9)) + CInt(Sheet1.Cells(i, 10))
+'                rs!å¹³å‡åˆ† = CInt(rs!æ€»åˆ† / 3)
+'                Sheet1.Cells(i, 11) = rs!å¹³å‡åˆ†
 '            End If
 '            rs.Update
 '
@@ -137,19 +137,19 @@ Sub db()
 '                rs!chinese = allchineseC
 '                rs!english = allenglishC
 '                rs!Math = allmathC
-'                rs!Æ½¾ù·Ö = CInt((rs!chinese + rs!english + rs!Math) / 3)
-'                rs!×Ü·Ö = rs!chinese + rs!english + rs!Math
-'                Sheet1.Cells(i, 17) = rs!Æ½¾ù·Ö
+'                rs!å¹³å‡åˆ† = CInt((rs!chinese + rs!english + rs!Math) / 3)
+'                rs!æ€»åˆ† = rs!chinese + rs!english + rs!Math
+'                Sheet1.Cells(i, 17) = rs!å¹³å‡åˆ†
 '            Else
-'                rs!×Ü·Ö = CInt(Sheet1.Cells(i, 14)) + CInt(Sheet1.Cells(i, 15)) + CInt(Sheet1.Cells(i, 16))
-'                rs!Æ½¾ù·Ö = CInt(rs!×Ü·Ö / 3)
-'                Sheet1.Cells(i, 17) = rs!Æ½¾ù·Ö
+'                rs!æ€»åˆ† = CInt(Sheet1.Cells(i, 14)) + CInt(Sheet1.Cells(i, 15)) + CInt(Sheet1.Cells(i, 16))
+'                rs!å¹³å‡åˆ† = CInt(rs!æ€»åˆ† / 3)
+'                Sheet1.Cells(i, 17) = rs!å¹³å‡åˆ†
 '            End If
 '            rs.Update
 '        Next
 '
 '        rs.Close
-'        MsgBox ("³É¼¨ÒÑ¾­³É¹¦Ğ´ÈëÊı¾İ¿â")
+'        MsgBox ("æˆç»©å·²ç»æˆåŠŸå†™å…¥æ•°æ®åº“")
 '    End If
     
     Set cn = Nothing
@@ -169,13 +169,13 @@ Sub db2_excel()
     cn.Provider = "Microsoft.ACE.OLEDB.12.0"        'access 2007/2010/2013 64bit version use this ace engine
                                                     ' maybe 32bit version sw can use "Microsoft.Jet.Oledb.4.0"
     'cn.Properties("Extended  Properties").Value = "Excel 12.0"
-    Fpath = ThisWorkbook.path & "\Êı¾İ¿â\Excel_1.xlsx"
+    Fpath = ThisWorkbook.path & "\æ•°æ®åº“\Excel_1.xlsx"
     CnStr = "Provider=Microsoft.ACE.OLEDB.12.0;" & _
             "Data Source=" & Fpath & ";" & _
             "Extended Properties=""Excel 12.0;HDR=NO;IMEX=1"";"     'IMEX indicate the mode of using Excel file   0-output  1- input 2-mix
     cn.ConnectionString = CnStr
 
-    'cn.Open "Provider=Microsoft.ACE.OLEDB.12.0;" & "Extended Properties=""Excel 12.0 Macro;HDR=NO"";" & "Data Source=" & ThisWorkbook.Path & "\Êı¾İ¿â\Excel_1.xlsx;"
+    'cn.Open "Provider=Microsoft.ACE.OLEDB.12.0;" & "Extended Properties=""Excel 12.0 Macro;HDR=NO"";" & "Data Source=" & ThisWorkbook.Path & "\æ•°æ®åº“\Excel_1.xlsx;"
     
     cn.Open
     
@@ -247,7 +247,7 @@ Sub db2_excel()
     Set rs = Nothing
 End Sub
 
-Sub ºÏ²¢¹¤×÷²¾Êı¾İ()
+Sub åˆå¹¶å·¥ä½œç°¿æ•°æ®()
 Dim cnn As New Connection, rs As New Recordset
 Dim cn As Object
 Dim pname As String
@@ -256,25 +256,25 @@ myname = Dir(ThisWorkbook.path & "\*.xlsm")
 Range("A2:XFD1048576").Clear
 While myname <> ""
 pname = ThisWorkbook.path & "\" & myname '
-If myname <> "ºÏ²¢½á¹û.xlsm" Then
-If myname <> "ºÏ²¢½á¹û.xlsm" Then Workbooks.Open pname
+If myname <> "åˆå¹¶ç»“æœ.xlsm" Then
+If myname <> "åˆå¹¶ç»“æœ.xlsm" Then Workbooks.Open pname
 k = k + 1
 
 Range("A1").Select
-Selection.End(xlDown).Select 'Òª±£Ö¤AÁĞÃ»ÓĞ¿Õµ¥¸ñ²ÅÄÜÕâÑùÊ¹ÓÃ
+Selection.End(xlDown).Select 'è¦ä¿è¯Aåˆ—æ²¡æœ‰ç©ºå•æ ¼æ‰èƒ½è¿™æ ·ä½¿ç”¨
 Selection.End(xlDown).Select
 Selection.End(xlUp).Offset(1, 0).Select
 lrow = Selection.row
 cnn.Open "Provider=Microsoft.ACE.OLEDB.12.0;" & "Extended Properties=Excel 12.0 Macro;" & "Data Source=" & pname
 sname = GetSheetList(pname)
-strSql = "Select Éí·İÖ¤ºÅÂë,Ô­ĞÕÃû,Ïç±àÂë,´å±àÂë,×é±àÂë,ColumnF,Ò½ÁÆÖ¤ºÅ,ColumnH,ColumnI,ColumnJ,ÁªÏµµç»°,ColumnL,ColumnM,ColumnN,ColumnO,Óë»§Ö÷¹ØÏµ FROM [" & sname & "$]" ' Where ĞÕÃû like '%" & str1 & "%'"
-'strSql = "Select Éí·İÖ¤ºÅÂë,Ô­ĞÕÃû,Ïç±àÂë,´å±àÂë,×é±àÂë,Ò½ÁÆÖ¤ºÅ,ÁªÏµµç»°,Óë»§Ö÷¹ØÏµ FROM [" & sname & "$]" ' Where ĞÕÃû like '%" & str1 & "%'"
+strSql = "Select èº«ä»½è¯å·ç ,åŸå§“å,ä¹¡ç¼–ç ,æ‘ç¼–ç ,ç»„ç¼–ç ,ColumnF,åŒ»ç–—è¯å·,ColumnH,ColumnI,ColumnJ,è”ç³»ç”µè¯,ColumnL,ColumnM,ColumnN,ColumnO,ä¸æˆ·ä¸»å…³ç³» FROM [" & sname & "$]" ' Where å§“å like '%" & str1 & "%'"
+'strSql = "Select èº«ä»½è¯å·ç ,åŸå§“å,ä¹¡ç¼–ç ,æ‘ç¼–ç ,ç»„ç¼–ç ,åŒ»ç–—è¯å·,è”ç³»ç”µè¯,ä¸æˆ·ä¸»å…³ç³» FROM [" & sname & "$]" ' Where å§“å like '%" & str1 & "%'"
 rs.Open strSql, cnn, adOpenStatic
 Sheet2.Cells(lrow, 1).CopyFromRecordset rs
 cnn.Close
 'cn.close
 End If
-If myname <> "ºÏ²¢½á¹û.xlsm" Then Workbooks(myname).Close True
+If myname <> "åˆå¹¶ç»“æœ.xlsm" Then Workbooks(myname).Close True
 myname = Dir
 Wend
 Set cnn = Nothing
@@ -295,7 +295,7 @@ SheetNum(i) = Left(tbSheet.Name, InStr(1, tbSheet.Name, "$") - 1)
 i = i + 1
 End If
 Next
-GetSheetList = Trim(SheetNum(0)) 'Ö»»ñÈ¡¹¤×÷²¾µÚÒ»¸ö¹¤×÷±íµÄÃû³Æ
+GetSheetList = Trim(SheetNum(0)) 'åªè·å–å·¥ä½œç°¿ç¬¬ä¸€ä¸ªå·¥ä½œè¡¨çš„åç§°
 Set adoxCatalog = Nothing
 End Function
 
@@ -356,7 +356,7 @@ Public Function get_lib(InputPath As String, SigMap() As SIGNAL_MAP, Prm() As St
         cn.Open
 
         rs.ActiveConnection = cn
-        rs.Open "select ParameterName from [DID_Table$]", , adOpenDynamic, adLockPessimistic     '"select * from [DID_Table$],[VT Config$]"¿ÉÒÔ¼ìË÷¶à¸ö±í
+        rs.Open "select ParameterName from [DID_Table$]", , adOpenDynamic, adLockPessimistic     '"select * from [DID_Table$],[VT Config$]"å¯ä»¥æ£€ç´¢å¤šä¸ªè¡¨
         
         rs.MoveFirst
         j = 0
@@ -386,7 +386,7 @@ Public Function get_lib(InputPath As String, SigMap() As SIGNAL_MAP, Prm() As St
         cn.Open
 
         rs.ActiveConnection = cn
-        rs.Open "select Command from [Command Pool$]", , adOpenDynamic, adLockPessimistic     '"select * from [DID_Table$],[VT Config$]"¿ÉÒÔ¼ìË÷¶à¸ö±í
+        rs.Open "select Command from [Command Pool$]", , adOpenDynamic, adLockPessimistic     '"select * from [DID_Table$],[VT Config$]"å¯ä»¥æ£€ç´¢å¤šä¸ªè¡¨
         
         rs.MoveFirst
         j = 0
@@ -415,7 +415,7 @@ Public Function get_lib(InputPath As String, SigMap() As SIGNAL_MAP, Prm() As St
         cn.Open
 
         rs.ActiveConnection = cn
-        rs.Open "select [App Name],[Alias] from [Hardware$]", , adOpenDynamic, adLockPessimistic     '"select * from [DID_Table$],[VT Config$]"¿ÉÒÔ¼ìË÷¶à¸ö±í
+        rs.Open "select [App Name],[Alias] from [Hardware$]", , adOpenDynamic, adLockPessimistic     '"select * from [DID_Table$],[VT Config$]"å¯ä»¥æ£€ç´¢å¤šä¸ªè¡¨
         
         
         rs.MoveFirst
@@ -460,7 +460,7 @@ Public Function get_lib(InputPath As String, SigMap() As SIGNAL_MAP, Prm() As St
         sql_str = "select Name,[CAN Input],[LIN Input],[CAN Output],[LIN Output] from [Inputs$] where [CAN Input]<>'' or [LIN Input]<>'' or [CAN Output]<>'' or [LIN Output]<>'' " & _
                   "Union " & _
                   "select Name,[CAN Input],[LIN Input],[CAN Output],[LIN Output] from [Outputs$] where [CAN Input]<>'' or [LIN Input]<>'' or [CAN Output]<>'' or [LIN Output]<>''"
-        rs.Open sql_str, , adOpenDynamic, adLockPessimistic     '"select * from [DID_Table$],[VT Config$]"¿ÉÒÔ¼ìË÷¶à¸ö±í,Í¬Ê±¼ìË÷¶àÕÅ±í»áÂıºÜ¶à
+        rs.Open sql_str, , adOpenDynamic, adLockPessimistic     '"select * from [DID_Table$],[VT Config$]"å¯ä»¥æ£€ç´¢å¤šä¸ªè¡¨,åŒæ—¶æ£€ç´¢å¤šå¼ è¡¨ä¼šæ…¢å¾ˆå¤š
         
         
         ReDim Preserve SigMap(rs.RecordCount - 1) As SIGNAL_MAP
@@ -488,7 +488,7 @@ Public Function get_lib(InputPath As String, SigMap() As SIGNAL_MAP, Prm() As St
 
         sql_str = "select [Signal Name],[DBC Name],[Frame Name] from [CAN_$] where [Signal Name] <>'' "
         'where [CAN Input]<>''  or [LIN Input]<>'' or [CAN Output]<>'' or [LIN Output]<>''        ',[Outputs$]
-        rs.Open sql_str, , adOpenDynamic, adLockPessimistic     '"select * from [DID_Table$],[VT Config$]"¿ÉÒÔ¼ìË÷¶à¸ö±í,Í¬Ê±¼ìË÷¶àÕÅ±í»áÂıºÜ¶à
+        rs.Open sql_str, , adOpenDynamic, adLockPessimistic     '"select * from [DID_Table$],[VT Config$]"å¯ä»¥æ£€ç´¢å¤šä¸ªè¡¨,åŒæ—¶æ£€ç´¢å¤šå¼ è¡¨ä¼šæ…¢å¾ˆå¤š
         
         Dim Can_Link() As CAN_LIN_MAP
         ReDim Preserve Can_Link(rs.RecordCount - 1) As CAN_LIN_MAP
@@ -505,7 +505,7 @@ Public Function get_lib(InputPath As String, SigMap() As SIGNAL_MAP, Prm() As St
                 
         sql_str = "select [Signal Name],[DBC Name],[Frame Name] from [LIN_$] where [Signal Name] <>''"
         'where [CAN Input]<>''  or [LIN Input]<>'' or [CAN Output]<>'' or [LIN Output]<>''        ',[Outputs$]
-        rs.Open sql_str, , adOpenDynamic, adLockPessimistic     '"select * from [DID_Table$],[VT Config$]"¿ÉÒÔ¼ìË÷¶à¸ö±í,Í¬Ê±¼ìË÷¶àÕÅ±í»áÂıºÜ¶à
+        rs.Open sql_str, , adOpenDynamic, adLockPessimistic     '"select * from [DID_Table$],[VT Config$]"å¯ä»¥æ£€ç´¢å¤šä¸ªè¡¨,åŒæ—¶æ£€ç´¢å¤šå¼ è¡¨ä¼šæ…¢å¾ˆå¤š
         
         Dim Lin_Link() As CAN_LIN_MAP
         ReDim Preserve Lin_Link(rs.RecordCount - 1) As CAN_LIN_MAP
@@ -607,7 +607,7 @@ Public Sub Testcase_Convert()
     
     
     
-    result = MsgBox("ÇëÑ¡ÔñÊı¾İ¿âÄ¿Â¼", vbYesNo, "²Ù×÷ÌáÊ¾")
+    result = MsgBox("è¯·é€‰æ‹©æ•°æ®åº“ç›®å½•", vbYesNo, "æ“ä½œæç¤º")
     'vbOK=1,vbCancel=2,vbAbort=3,vbRetry=4,vbIgnore=5,vbYes=6,vbNo=7
     If result = vbNo Then
         Exit Sub
@@ -619,7 +619,7 @@ Public Sub Testcase_Convert()
         Exit Sub
     End If
     
-    result = MsgBox("ÇëÑ¡ÔñTestcaseÎÄ¼ş", vbYesNo, "²Ù×÷ÌáÊ¾")
+    result = MsgBox("è¯·é€‰æ‹©Testcaseæ–‡ä»¶", vbYesNo, "æ“ä½œæç¤º")
     If result = vbNo Then
         Exit Sub
     End If
@@ -721,9 +721,9 @@ Public Sub Testcase_Convert()
     
 
     
-    Application.DisplayAlerts = False '¹Ø±ÕÌáÊ¾
+    Application.DisplayAlerts = False 'å…³é—­æç¤º
     wb.Close True
-    Application.DisplayAlerts = True  '»Ö¸´´ò¿ªÌáÊ¾
+    Application.DisplayAlerts = True  'æ¢å¤æ‰“å¼€æç¤º
     
 End Sub
 
@@ -742,7 +742,7 @@ Private Function SelectFile() As String
 
     With Application.FileDialog(msoFileDialogFilePicker)
         .AllowMultiSelect = False
-        .Filters.Clear   'Çå³ıÎÄ¼ş¹ıÂËÆ÷
+        .Filters.Clear   'æ¸…é™¤æ–‡ä»¶è¿‡æ»¤å™¨
         If .Show = False Then Exit Function
         path = .SelectedItems(1)
     End With
